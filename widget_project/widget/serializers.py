@@ -4,4 +4,4 @@ from .models import Widget
 class WidgetSerializer(serializers.ModelSerializer):
     class Meta:
         model = Widget
-        fields = ['pk','name', 'parts', 'created', 'updated']
+        fields = ['id','name', 'parts', 'created', 'updated']

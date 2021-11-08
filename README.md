@@ -79,8 +79,52 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
+# Accessing the API EndPoints
+
+The following endpoints have been exposed:
+
+    * /widgets/             # List View
+    * /widgets/:id>/        # Detailed View via the id
+
+## Accessing Endpoints from the CLI
+
+Use `http` to access the endpoints. Some examples are provided below:
+
+
+```shell
+% http GET http://localhost:8000/widgets/
+% http PUT http://localhost:8000/widgets/1/ name="Weather" parts=3
+% http DELETE http://localhost:8000/widgets/3/
+```
+## Accessing Endpoints from the Browser
+
+Thanks to Django Framework a browsable API is available for the Widget
+
+`List View`
+
+http://localhost:8000/widgets/
+
+`Detailed View`
+
+http://localhost:8000/widgets/1/
 # OpenAPI Spec
 
 Once the server is running, you can check out the OpenAPI spec by visiting:
 
 http://localhost:8000/docs
+
+# Testing
+
+There currently exists 1 Unit Test for the model itself and 4 Functional Tests for each CRUD operation. 
+
+## Locate the tests in the Repository 
+Tests can be located in `widget_project->widget->test.py`
+
+## Running the tests
+
+```shell
+% pipenv shell
+% cd widget_project
+% python manage.py test
+```
+
