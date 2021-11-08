@@ -90,8 +90,10 @@ The following endpoints have been exposed:
 
 Use `http` to access the endpoints. Some examples are provided below:
 
+Make sure you are in the root directory of the repo and in the venv
 
 ```shell
+% pipenv shell
 % http GET http://localhost:8000/widgets/
 % http PUT http://localhost:8000/widgets/1/ name="Weather" parts=3
 % http DELETE http://localhost:8000/widgets/3/
