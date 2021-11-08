@@ -79,3 +79,8 @@ Starting development server at http://127.0.0.1:8000/
 Quit the server with CONTROL-C.
 ```
 
+# OpenAPI Spec
+
+Once the server is running, you can check out the OpenAPI spec by visiting:
+
+http://localhost:8000/docs
